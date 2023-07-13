@@ -1,0 +1,17 @@
+num1 = int(input("Enter a Number 1: "))
+num2 = int(input("Enter a Number 2: "))
+num3 = int(input("Enter a Number 3: "))
+    
+class Point:   
+    
+    def __init__(self,num1,num2,num3):
+        self.x = num1       
+        self.y = num2
+        self.z = num3
+       
+    def sqSum(self):   
+        return self.x**2 + self.y**2 + self.z**2
+        
+obj1 = Point(num1,num2,num3)
+result = obj1.sqSum()
+print(result) 
