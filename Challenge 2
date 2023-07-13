@@ -1,0 +1,33 @@
+num1 = int(input("Enter a Number 1: "))
+num2 = int(input("Enter a Number 2: "))
+    
+class Calculator:   
+    
+    def __init__(self,num1,num2):
+        self.x = num1       
+        self.y = num2
+      
+    def add(self):   
+        return self.x + self.y
+    
+    def subtract(self):
+        return self.x - self.y
+
+    def multiply(self):
+        return self.x * self.y
+        
+    def divide(self):
+        return self.x / self.y      
+
+        
+obj = Calculator(num1,num2) 
+     
+add_result = obj.add()
+subtract_result = obj.subtract()
+multiply_result = obj.multiply()
+divide_result = obj.divide()
+            
+print(add_result) 
+print(subtract_result)
+print(multiply_result)
+print(divide_result)
