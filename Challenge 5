@@ -1,0 +1,35 @@
+class Account:
+    def __init__(self,title=None,balance=0):
+        self.title = title
+        self.balance = balance
+     
+    def withdrawal(self, balance=0):
+        self.balance -= balance
+
+    def deposit(self, balance=0):
+        self.balance += balance
+
+    def getBalance(self):
+        return self.balance
+
+class SavingsAccount(Account):
+    def __init__(self,title=None,balance=0,interestRate=0):
+        Account.__init__(self, title, balance)
+        self.interestRate = interestRate
+
+    def interestAmount(self,):
+        return (self.balance * self.interestRate) / 100
+
+demo1 = SavingsAccount("Ashish", 2000, 5)
+print(f"Hi {demo1.title}, your balance = {demo1.balance}")
+
+demo1.deposit(500)
+balance = demo1.getBalance()
+print("Your new Balance is = ", balance)
+
+demo1.withdrawal(500)
+balance = demo1.getBalance()
+print("Your new Balance is = ", balance)
+
+interest = demo1.interestAmount()
+print("Total Interest Rate = ", interest)
